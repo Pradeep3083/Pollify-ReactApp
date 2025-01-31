@@ -153,13 +153,14 @@ function Navbar() {
                 PaperProps={{
                   sx: {
                     mt: 1.5,
-                    backgroundColor: '#1a237e',
+                    backgroundColor: 'white',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                     '& .MuiMenuItem-root': {
-                      color: 'white',
+                      color: '#1a237e',
                       fontSize: '1rem',
                       py: 1.5,
                       '&:hover': {
-                        backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                        backgroundColor: 'rgba(26, 35, 126, 0.08)'
                       }
                     }
                   }
@@ -171,6 +172,12 @@ function Navbar() {
                     onClick={handleClose}
                     component={Link}
                     to={item.path}
+                    sx={{
+                      fontWeight: 500,
+                      '&:not(:last-child)': {
+                        borderBottom: '1px solid rgba(26, 35, 126, 0.1)'
+                      }
+                    }}
                   >
                     {item.text}
                   </MenuItem>
